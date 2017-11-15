@@ -1,0 +1,60 @@
+<div class="row">
+    <div class="col-md-12">
+        <div class="card">
+            <div class="card-content">
+                <div class="table-responsive">
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th class="text-center">#</th>
+                                <th class="text-center">H/F</th>
+                                <th class="text-center">RVP</th>
+                                <th class="text-left">Adhérent</th>
+                                <th class="text-left">Source</th>
+                                <th class="text-center">Qualité</th>
+                                <th class="text-right">Starter</th>
+                                <th class="text-right">Montant</th>
+                                <th class="text-right">Encaissé</th>
+                                <th class="text-center">Versement</th>
+                                <th class="text-center">1er Prel</th>
+                                <th class="text-center">PEA</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let operation of operations; let i = index" (click)="setClickedRow(i)" (dblclick)="func2()" [class.active]="i == selectedRow">
+                                <td class="text-center">
+                                    <span *ngIf="operation.type==='abonnement'" Class="roundbadge abonnement">A</span>
+                                    <span *ngIf="operation.type==='regul'"      Class="roundbadge regul">R</span>
+                                     <span *ngIf="operation.type==='sd'"      Class="roundbadge sd">SD</span>
+                                    <span *ngIf="operation.type==='goodies'"      Class="roundbadge goodies">G</span>
+                                    <span *ngIf="operation.type==='remboursement'"      Class="roundbadge remboursement">R</span>
+                               
+                                </td>
+                                <td class="text-center">{{operation.sexe}}</td>
+                                <td class="text-left"><i *ngIf="operation.rvp" class="material-icons">check</i></td>
+                                <td class="text-left"><span><b>{{operation.nom}}</b> {{operation.prenom}}</span></td>
+                                <td class="text-left">{{operation.source}}</td>
+                                <td class="text-center"><span [ngClass]="{badgeEric:true, badgeLib: operation.qualite === 'Lib', badgeTC: operation.qualite === 'TC', badgeEmpty:operation.qualite == null}">{{operation.qualite}}</span></td>
+                                <td class="text-right">{{operation.pack |currency:'EUR':true}}</td>
+                                <td class="text-right">{{operation.montant_abo |currency:'EUR':true}}</td>
+                                <td class="text-right">
+                                    <div *ngFor="let e of operation.encaissements">
+                                        <span>{{e.montant_encaisse |currency:'EUR':true}}</span>
+                                    </div>
+                                </td>
+                                <td class="text-center">
+                                     <div *ngFor="let e of operation.encaissements">
+                                        <span>{{e.mode_versement}}</span>
+                                    </div>
+                                </td>
+                                <td class="text-center">{{operation.date_prelevement}}</td>
+                                <td class="text-center">{{operation.pea |currency:'EUR':true}}</td>
+
+                            </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>

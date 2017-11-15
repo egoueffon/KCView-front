@@ -1,0 +1,44 @@
+li{
+    display: table-cell;
+    width: 280px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    font-size: 12px;
+    text-transform: uppercase;
+     -webkit-font-smoothing: subpixel-antialiased;
+     top: -4px;
+     left: 0px;
+     cursor: pointer;
+     font-weight: 500;
+}
+
+.full-center-container{
+  text-align: center;
+  width: 100%;
+}
+
+.moving-tab{
+  width: 280px;
+}
+
+.wizard-card .wizard-navigation {
+  position: relative;
+  background-color:#F4F4F4;
+}
+
+.cardAbo {
+  display: inline-block;
+  position: relative;
+  width: 800px;
+  margin: 0px 0;
+  box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.14);
+  border-radius: 6px;
+  color: rgba(0,0,0, 0.87);
+  background: #fff;
+}
+
+
+
+
+

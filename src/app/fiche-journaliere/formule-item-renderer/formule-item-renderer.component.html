@@ -1,0 +1,15 @@
+<div [ngClass]="{'abonnement' : true, 'selected': formule.selected}" (click)="onClick()">
+  <div class="content" [ngStyle]="{'background': 'url(' + imageUrl + '), ' + formule.color ,
+                                   'background-repeat': 'no-repeat',
+                                   'background-position': '50% 50%',
+'-webkit-background-origin': 'padding-box',
+'background-origin': 'padding-box',
+'-webkit-background-clip': 'border-box',
+'background-clip': 'border-box',
+'-webkit-background-size': '50% 50%',
+'background-size': '80px'}">
+    <div class="title">
+      <div class="txt"></div>
+    </div>
+  </div>
+</div>

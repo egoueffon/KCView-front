@@ -1,0 +1,105 @@
+.example-container {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  max-height:450px;
+  height: 450px;
+  min-width: 300px;
+}
+
+.mat-table {
+  overflow: auto;
+  max-height: 500px;
+
+}
+
+.example-row{
+  min-height: 25px;
+}
+
+.cdk-column-type {
+  max-width: 50px;
+  width: 30px;
+} 
+
+.cdk-column-sexe {
+  max-width: 50px;
+} 
+
+.cdk-column-rvp {
+  max-width: 50px;
+}
+
+.cdk-column-nom {
+  min-width: 200px;
+}
+
+
+.badgeEric{
+    display:inline-block;
+    min-width:10px;
+    padding:3px 7px;
+    font-size:12px;
+    font-weight:700;
+    line-height:1;
+    color:#fff;
+    text-align:center;
+    white-space:nowrap;
+    vertical-align:middle;
+    background-color:#777;
+    border-radius: 5px}
+
+    .roundbadge{
+    display:inline-block;
+    min-width:10px;
+    padding:3px 7px;
+    font-size:12px;
+    font-weight:700;
+    line-height:1;
+    color:#fff;
+    text-align:center;
+    white-space:nowrap;
+    vertical-align:middle;
+    background-color:#777;
+    border-radius: 15px}
+    
+    .badgeEmpty{
+        display:none
+    }
+
+    .badgeTC{
+        background-color:#CCC;
+    }
+
+     .badgeLib{
+        background-color:#7fff98;
+    }
+
+     .abonnement{
+        background-color:#777;
+    }
+
+    .regul{
+        background-color:#EEE;
+    }
+
+    .sd{
+        background-color:#7fff98;
+    }
+
+      .goodies{
+        background-color:#C4C4C4;
+    }
+
+      .remboursement{
+        background-color:#00FF44;
+    }
+
+    .wrappable {
+    white-space: normal;
+}     
+
+.table tr.active td {
+  background-color:#123456 !important;
+  color: white;
+}

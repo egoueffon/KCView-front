@@ -1,0 +1,64 @@
+<div class="row">
+    <div class="col-lg-3 col-md-6 col-sm-6 dateSelectorContent">
+        <h3>{{clubSynthese.club.name}}</h3>
+        <div>
+            <my-date-picker name="mydate" [selDate]="selDate" [options]="myDatePickerOptions" (dateChanged)="onDateChanged($event)"></my-date-picker>
+        </div>
+    </div>
+    <div class="col-lg-3 col-md-6 col-sm-6">
+        <div class="card card-stats card-contentFicheEncaissement">
+            <div class="card-header " data-background-color="green">
+                <i class="material-icons">group_add</i>
+            </div>
+            <div>
+                <div style="position:absolute;right:5px;bottom:-10px" data-label="10%" class="css-bar css-bar-10 css-bar-sm css-bar-default"></div>
+                <span class="nbPrincipal">{{clubSynthese.nbAbosJour}}</span>
+                <p class="labelgris">Transfo 40%</p>
+                <div class="bottom">
+                    <span class="nbPrincipal">{{clubSynthese.nbAbosMois}}/{{clubSynthese.objectifAbosMois}}</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-lg-3 col-md-6 col-sm-6">
+        <div class="card card-stats card-contentFicheEncaissement">
+            <div class="card-header" data-background-color="samdolls">
+                <i class="material-icons">euro_symbol</i>
+            </div>
+            <div>
+                <span class="nbPrincipal">{{syntheseFiche.encaissement | currency:'EUR':true}}</span>
+                <p class="labelgris">PM : 111,90 €</p>
+                <div class="bottom">
+                    <span class="nbPrincipal">{{clubSynthese.camois | currency:'EUR':true}}</span>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="col-lg-3 col-md-6 col-sm-6">
+        <div class="card card-stats card-contentFicheEncaissement" style="display:flex;justify-content:space-between">
+            <div>
+                <ul class="feeds">
+                    <li>
+                        <div class="bg-info"><i class="fa fa-credit-card text-white"></i></div><span class="labelgris">{{syntheseFiche.encaissementCB | currency:'EUR':true}}</span>
+                    </li>
+                    <li>
+                        <div class="bg-info"><i class="fa fa-money text-white"></i></div><span class="labelgris">{{syntheseFiche.encaissementEspece | currency:'EUR':true}}</span>
+                    </li>
+                </ul>
+            </div>
+            <div>
+
+                <ul class="feeds">
+                    <li>
+                        <div class="bg-info"><i class="fa fa-credit-card text-white"></i></div><span class="labelgris" style="vertical-align: middle;">{{syntheseFiche.encaissementCheque | currency:'EUR':true}}</span>
+                    </li>
+                    <li>
+                        <div class="bg-info"><i class="fa fa-money text-white"></i></div><span class="labelgris">{{syntheseFiche.encaissementAutre | currency:'EUR':true}}</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>

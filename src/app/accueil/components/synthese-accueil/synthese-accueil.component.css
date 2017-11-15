@@ -1,0 +1,364 @@
+.test {
+  height: 300px;
+}
+
+.card-headerRico{
+   height: 50px;
+   width: 50px;
+}
+
+.cardSource {
+  box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.14);
+  border-radius: 6px;
+  border-color:darkgrey;
+  background: #fff;
+  width: 370px;
+  position: relative;
+  min-height: 80px;
+  max-height: 110px;
+  margin: 10px;
+}
+
+.card-body{padding: 5px;}
+
+/*******************
+ Breadcrumb and page title
+*******************/
+.page-titles {
+  background: #ffffff;
+  margin: 0 -30px 30px;
+  padding: 0px;
+  -webkit-box-shadow: 1px 0 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 1px 0 5px rgba(0, 0, 0, 0.1); }
+  .page-titles h3 {
+    margin-bottom: 0px;
+    margin-top: 8px; }
+  .page-titles .breadcrumb {
+    padding: 0px;
+    background: transparent;
+    font-size: 14px; }
+    .page-titles .breadcrumb li {
+      margin-top: 0px;
+      margin-bottom: 0px; }
+    .page-titles .breadcrumb .breadcrumb-item + .breadcrumb-item::before {
+      content: "\e649";
+      font-family: themify;
+      color: #a6b7bf;
+      font-size: 11px; }
+    .page-titles .breadcrumb .breadcrumb-item.active {
+      color: #99abb4; }
+
+
+      .text-themecolor {
+  color: #1e88e5 !important;
+}
+
+
+
+ .card-subtitle {
+    color: #99abb4; 
+    display: flex; 
+    font-weight: 300;
+}
+
+.mycard-content{ 
+    display: flex; 
+    justify-content: space-between;
+    font-weight: 300;
+    padding-left: 20px;
+    height: 85px;
+}
+
+.cardcontentTitle{
+  color: #99abb4; 
+    display: flex; 
+    flex-direction: column;
+    justify-content: flex-start;
+    font-weight: 300;
+}
+
+.font-light {
+  font-weight: 300; }
+
+  .text-muted {
+  color: #99abb4 !important; }
+
+  /*******************
+Headings
+*******************/
+h1,
+h2,
+h3,
+h4,
+h5,
+ {
+  color: #455a64;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400; }
+
+h1 {
+  line-height: 40px;
+  font-size: 36px; }
+
+h2 {
+  line-height: 36px;
+  font-size: 24px; }
+
+h3 {
+  line-height: 30px;
+  font-size: 21px; }
+
+h4 {
+  line-height: 22px;
+  font-size: 18px; }
+
+h5 {
+  line-height: 18px;
+  font-size: 16px;
+  font-weight: 400; }
+
+ h6{
+  line-height: 16px;
+  font-size: 14px;
+  font-weight: 400; }
+
+  /*******************
+Margin
+*******************/
+.m-0 {
+  margin: 0px; }
+
+.m-l-5 {
+  margin-left: 5px; }
+
+.m-l-10 {
+  margin-left: 10px; }
+
+.m-l-15 {
+  margin-left: 15px; }
+
+ .m-l-20 {
+  margin-left: 20px; }
+
+.m-l-30 {
+  margin-left: 30px; }
+
+ .m-l-40 {
+  margin-left: 40px; }
+
+ .m-r-5 {
+  margin-right: 5px; }
+
+.m-r-10 {
+  margin-right: 10px; }
+
+ .m-r-15 {
+  margin-right: 15px; }
+
+ .m-r-20 {
+  margin-right: 20px; }
+
+ .m-r-30 {
+  margin-right: 30px; }
+
+ .m-r-40 {
+  margin-right: 40px; }
+
+.m-t-0 {
+  margin-top: 0px; }
+
+ .m-t-5 {
+  margin-top: 5px; }
+
+.m-t-10 {
+  margin-top: 10px; }
+
+ .m-t-15 {
+  margin-top: 15px; }
+
+.m-t-20 {
+  margin-top: 20px; }
+
+.m-t-30 {
+  margin-top: 30px; }
+
+.m-t-40 {
+  margin-top: 40px; }
+
+.m-b-0 {
+  margin-bottom: 0px; }
+
+.m-b-5 {
+  margin-bottom: 5px; }
+
+.m-b-10 {
+  margin-bottom: 10px; }
+
+.m-b-15 {
+  margin-bottom: 15px; }
+
+.m-b-20 {
+  margin-bottom: 20px; }
+
+  .p-t-0{
+    padding: 0px;
+  }
+
+  .contour{
+    border-bottom-width: 1px;
+    border-style: solid;
+  }
+
+  .align-self-center{-ms-flex-item-align:center!important;align-self:center!important}
+
+  .test{
+    display: flex; 
+    flex-direction: column;
+    align-content: center;
+  }
+
+  .row{
+    padding-top: 10px !important;
+  }
+
+  .stylish-table tbody tr:hover, .stylish-table tbody tr.active {
+  border-left: 4px solid #1e88e5;
+}
+
+
+.stylish-table thead th {
+  font-weight: 200 !important;
+ color: #99abb4;}
+
+.stylish-table tbody tr {
+  border-left: 4px solid #ffffff; }
+  .stylish-table tbody tr:hover, .stylish-table tbody tr.active {
+    border-left: 4px solid #009efb; }
+
+.stylish-table tbody td {
+  vertical-align: middle; }
+  .stylish-table tbody td h6 {
+    font-weight: 500;
+    margin-bottom: 0px;
+    white-space: nowrap; }
+  .stylish-table tbody td small {
+    line-height: 12px;
+    white-space: nowrap; }
+
+/*******************
+Rounds
+*******************/
+.round {
+  line-height: 48px;
+  color: #ffffff;
+  width: 45px;
+  height: 45px;
+  display: inline-block;
+  font-weight: 400;
+  text-align: center;
+  border-radius: 100%;
+  background: #1e88e5; }
+  .round img {
+    border-radius: 100%; }
+
+.round-lg {
+  line-height: 65px;
+  width: 60px;
+  height: 60px;
+  font-size: 30px; }
+
+.round.round-info {
+  background: #1e88e5; }
+
+.round.round-warning {
+  background: #ffb22b; }
+
+.round.round-danger {
+  background: #fc4b6c; }
+
+.round.round-success {
+  background: #26c6da; }
+
+.round.round-primary {
+  background: #7460ee; }
+
+  /*******************
+Table Cell
+*******************/
+.table-box {
+  display: table;
+  width: 100%; }
+
+.table.no-border tbody td {
+  border: 0px; }
+
+.cell {
+  display: table-cell;
+  vertical-align: middle; }
+
+.table td, .table th {
+  border-color: #f3f1f1; }
+
+.table thead th, .table th {
+  font-weight: 500; }
+
+.table-hover tbody tr:hover {
+  background: #f2f4f8; }
+
+.v-middle td, .v-middle th {
+  vertical-align: middle; }
+
+.table-responsive {
+  display: block;
+  width: 100%;
+  overflow-x: auto;
+  -ms-overflow-style: -ms-autohiding-scrollbar; }
+
+
+  /*============================================================== 
+Dashboard1 chart
+ ============================================================== */
+.c3-chart-arcs-title, .c3-legend-item {
+  font-family: "Poppins", sans-serif;
+  fill: #67757c;
+  border: 1px }
+
+html body #visitor .c3-chart-arcs-title {
+  font-size: 18px;
+  fill: #99abb4; }
+
+ .c3-tooltip-container {
+    max-height: none !important;
+    border: 1px border-style solid;
+      fill: #67757c;
+}
+
+.c3-tooltip {
+    box-shadow: none;
+    width: 100%;
+border: 1px;
+border-style:solid;
+  fill: #67757c;
+
+}
+
+.c3-tooltip tr {
+    border-left: none !important;
+    border-right: none !important;
+}
+
+.c3-tooltip td.name {
+    border-left: none !important;
+}
+
+.c3-tooltip tr:first-child {
+    display: none;
+}
+
+.c3-tooltip-container .c3-chart-line {
+    opacity: 1 !important;
+}
+
+
+
+  

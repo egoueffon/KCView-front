@@ -1,0 +1,262 @@
+<!-- ============================================================== -->
+<!-- Bread crumb and right sidebar toggle -->
+<!-- ============================================================== -->
+<div class="row page-titles">
+    <div class="col-md-5 col-8 align-self-center">
+        <h3 class="text-themecolor m-b-0 m-t-0">Accueil</h3>
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="javascript:void(0)">Home</a></li>
+            <li class="breadcrumb-item active">Accueil</li>
+        </ol>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-lg-4">
+        <div class="card card-body" style="background-color: darkseagreen">
+            <div class="mycard-content">
+                <div class="col p-r-0 align-self-center">
+                    <h2 class="font-light m-b-0" style="padding: 0px;margin: 0px;">{{clubSynthese.nbAbosMois}}/{{clubSynthese.objectifAbosMois}}</h2>
+                    <h6 class="text-muted category" style="padding: 0px;margin: 0px;">Abos sur le mois</h6>
+                </div>
+                <div style="padding-top:0px">
+                    <div class="css-bar m-b-0 css-bar-info css-bar-54" data-label="60%"></div>
+                </div>
+            </div>
+            <div class="card-footer" style="margin-top:5px">
+                <p class="category">
+                    <span class="text-success"><i [ngClass]="{'fa': true, 'fa-long-arrow-up':clubSynthese.progAbosMois >=0, 'fa-long-arrow-down' :clubSynthese.progAbosMois < 0}"></i> {{clubSynthese.progAbosMois}}</span>                    sur N-1</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-lg-4">
+        <div class="card card-body" style="background-color: darksalmon">
+            <div class="mycard-content">
+                <div class="col p-r-0 align-self-center">
+                    <h2 class="font-light m-b-0" style="padding: 0px;margin: 0px;">50</h2>
+                    <h6 class="text-muted category" style="padding: 0px;margin: 0px;">Visites perdues du mois</h6>
+                </div>
+                <!-- <div style="padding-top:0px" ><div class="css-bar m-b-0 css-bar-info css-bar-54" data-label="85%"></div></div> -->
+            </div>
+            <div class="card-footer" style="margin-top:5px">
+                <p class="category">
+                    <span class="text-success"><i [ngClass]="{'fa': true, 'fa-long-arrow-up':clubSynthese.progAbosMois >=0, 'fa-long-arrow-down' :clubSynthese.progAbosMois < 0}"></i> {{clubSynthese.progAbosMois}}</span>                    sur N-1</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-lg-4">
+        <div class="card card-body" style="background-color: darkturquoise">
+            <div class="mycard-content">
+                <div class="col p-r-0 align-self-center">
+                    <h2 class="font-light m-b-0" style="padding: 0px;margin: 0px;">260</h2>
+                    <h6 class="text-muted category" style="padding: 0px;margin: 0px;">Visites du mois</h6>
+                </div>
+                <!-- <div style="padding-top:0px" ><div class="css-bar m-b-0 css-bar-info css-bar-54" data-label="10%"></div></div> -->
+            </div>
+            <div class="card-footer" style="margin-top:5px">
+                <p class="category">
+                    <span class="text-success"><i [ngClass]="{'fa': true, 'fa-long-arrow-up':clubSynthese.progAbosMois >=0, 'fa-long-arrow-down' :clubSynthese.progAbosMois < 0}"></i> {{clubSynthese.progAbosMois}}</span>                    sur N-1</p>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="row">
+    <div class="col-lg-4 col-xlg-3 col-md-5">
+        <div class="card card-body" style="height: 470px;">
+            <!-- Row -->
+            <h2 class="m-b-0" style="padding-bottom: 20px;margin: 0px;">SOURCES</h2>
+            <div class="card-body">
+                <div class="mycard-content  card-body">
+                    <div class="col p-r-0 align-self-center">
+                        <h2 class="font-light m-b-0" style="padding: 0px;margin: 0px;">10</h2>
+                        <h6 class="text-muted category" style="padding: 0px;margin: 0px;">Parrainage</h6>
+                    </div>
+                    <div style="padding-top:0px;margin-right: 5px;">
+                        <div class="css-bar m-b-0 css-bar-info css-bar-10" data-label="10%"></div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <hr class="m-t-0 m-b-0">
+            </div>
+            <div class="card-body">
+                <div class="mycard-content  card-body">
+                    <div class="col p-r-0 align-self-center">
+                        <h2 class="font-light m-b-0" style="padding: 0px;margin: 0px;">35</h2>
+                        <h6 class="text-muted category" style="padding: 0px;margin: 0px;">Passage</h6>
+                    </div>
+                    <div style="padding-top:0px;margin-right: 5px;">
+                        <div class="css-bar m-b-0 css-bar-info css-bar-35" data-label="35%"></div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <hr class="m-t-0 m-b-0">
+            </div>
+            <div class="card-body">
+                <div class="mycard-content  card-body">
+                    <div class="col p-r-0 align-self-center">
+                        <h2 class="font-light m-b-0" style="padding: 0px;margin: 0px;">50</h2>
+                        <h6 class="text-muted category" style="padding: 0px;margin: 0px;">Digital</h6>
+                    </div>
+                    <div style="padding-top:0px;margin-right: 5px;">
+                        <div class="css-bar m-b-0 css-bar-info css-bar-50" data-label="50%"></div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <hr class="m-t-0 m-b-0">
+            </div>
+            <div class="card-body">
+                <div class="mycard-content  card-body">
+                    <div class="col p-r-0 align-self-center">
+                        <h2 class="font-light m-b-0" style="padding: 0px;margin: 0px;">10</h2>
+                        <h6 class="text-muted category" style="padding: 0px;margin: 0px;">BAO</h6>
+                    </div>
+                    <div style="padding-top:0px;margin-right: 5px;">
+                        <div class="css-bar m-b-0 css-bar-info css-bar-10" data-label="10%"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="col-lg-8 col-xlg-9 col-md-7">
+        <div class="card">
+            <div class="card-content">
+
+
+<mat-button-toggle-group  #group="matButtonToggleGroup" (change)=changetest($event)>
+  <mat-button-toggle value="bar">
+    <i class="fa fa-bar-chart" aria-hidden="true"></i>
+  </mat-button-toggle>
+  <mat-button-toggle value="line">
+    <i class="fa fa-line-chart" aria-hidden="true"></i>
+  </mat-button-toggle>
+</mat-button-toggle-group>
+
+                <div>
+                    <h6 class="card-subtitle">Abonnements Vs Visites perdues</h6>
+                    <h6 class="card-subtitle">Mois</h6>
+                </div>
+            </div>
+            <div>
+                <p-chart #chart [type]="chartype" [data]="dataMonth" [options]="options" style="height: 360px;width: 50px"></p-chart>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-lg-4 col-xlg-3 col-md-5">
+
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title">C</h4>
+                <div class="text-center">
+                    <div ui-knob [value]="valueC" [options]="knOptions"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-4 col-xlg-3 col-md-5">
+
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title">TC</h4>
+                <div class="text-center">
+                    <div ui-knob [value]="valueTC" [options]="knOptions"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+    <div class="col-lg-4 col-xlg-3 col-md-5">
+
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title">Sans engagement</h4>
+                <div class="text-center">
+                    <div ui-knob [value]="valueSA" [options]="knOptions"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+</div>
+
+
+
+<!-- encaissenent --><!-- encaissenent --><!-- encaissenent --><!-- encaissenent --><!-- encaissenent --><!-- encaissenent --><!-- encaissenent --><!-- encaissenent --><!-- encaissenent -->
+<!-- encaissenent --><!-- encaissenent --><!-- encaissenent --><!-- encaissenent --><!-- encaissenent --><!-- encaissenent --><!-- encaissenent --><!-- encaissenent -->
+
+<div class="row">
+    <div class="col-lg-4">
+        <div class="card card-body">
+            <div class="mycard-content">
+                <div class="col p-r-0 align-self-center">
+                    <h2 class="font-light m-b-0" style="padding: 0px;margin: 0px;">{{clubSynthese.camois | currency:'EUR':true}}</h2>
+                    <h6 class="text-muted category" style="padding: 0px;margin: 0px;">Encaissment sur le mois</h6>
+                </div>
+            </div>
+            <div class="card-footer" style="margin-top:5px">
+                <p class="category">
+                    <span class="text-success"><i [ngClass]="{'fa': true, 'fa-long-arrow-up':clubSynthese.progAbosMois >=0, 'fa-long-arrow-down' :clubSynthese.progAbosMois < 0}"></i> {{clubSynthese.progAbosMois}}</span>                    sur N-1</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-lg-4">
+        <div class="card card-body">
+            <div class="mycard-content">
+                <div class="col p-r-0 align-self-center">
+                    <h2 class="font-light m-b-0" style="padding: 0px;margin: 0px;">50</h2>
+                    <h6 class="text-muted category" style="padding: 0px;margin: 0px;">Panier moyen du mois</h6>
+                </div>
+                <!-- <div style="padding-top:0px" ><div class="css-bar m-b-0 css-bar-info css-bar-54" data-label="85%"></div></div> -->
+            </div>
+            <div class="card-footer" style="margin-top:5px">
+                <p class="category">
+                    <span class="text-success"><i [ngClass]="{'fa': true, 'fa-long-arrow-up':clubSynthese.progAbosMois >=0, 'fa-long-arrow-down' :clubSynthese.progAbosMois < 0}"></i> {{clubSynthese.progAbosMois}}</span>                    sur N-1</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-lg-4">
+        <div class="card card-body">
+            <div class="mycard-content">
+                <div class="col p-r-0 align-self-center">
+                    <h2 class="font-light m-b-0" style="padding: 0px;margin: 0px;">260</h2>
+                    <h6 class="text-muted category" style="padding: 0px;margin: 0px;">Offre moyenne du mois</h6>
+                </div>
+                <!-- <div style="padding-top:0px" ><div class="css-bar m-b-0 css-bar-info css-bar-54" data-label="10%"></div></div> -->
+            </div>
+            <div class="card-footer" style="margin-top:5px">
+                <p class="category">
+                    <span class="text-success"><i [ngClass]="{'fa': true, 'fa-long-arrow-up':clubSynthese.progAbosMois >=0, 'fa-long-arrow-down' :clubSynthese.progAbosMois < 0}"></i> {{clubSynthese.progAbosMois}}</span>                    sur N-1</p>
+            </div>
+        </div>
+    </div>
+
+</div>

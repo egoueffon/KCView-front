@@ -1,0 +1,140 @@
+.abonnement{
+  border:solid 1px #6b6b6b;
+  vertical-align:top;
+  float: left;
+  width: 150px;
+  min-height: 50px;
+  margin: 15px 0;
+  cursor:pointer;
+  /*transition-duration:.2s;
+  -webkit-transition-duration:.2s;*/
+}
+
+.abonnement:hover{
+
+    width: 150px;
+}
+
+.abonnement:hover .content{
+    padding-top:14px;
+    height:50px;
+}
+
+/* separation entre les fils */
+.abonnement:nth-child(1n){
+  margin: 5px 5px;
+}
+
+
+
+.abonnement.selected:hover{
+    width: 150px;
+}
+
+.abonnement.selected:hover .content{
+    padding-top:15px;
+    height:50px;
+}
+
+
+
+.abonnement.twocool .options ul li:last-child,
+.abonnement.twocool2 .options ul li:last-child{
+  border-bottom: none;
+}
+.abonnement .options ul li span{
+  font-size: 16px;
+  color:#828282;
+  display: block;
+}
+
+.abonnement .content{
+  border: solid transparent;
+  border-width: 8px 8px 8px;
+  text-align: center;
+  padding: 15px;
+  box-sizing: border-box;
+  height:50px;
+}
+
+.abonnement.selected{
+  border: 1px solid #bbce02;
+
+}
+
+
+.abonnement.selected .content{
+  padding: 15px 2px;
+  border: solid #bbce02;
+  border-width: 8px 8px 8px;
+  height:50px;
+
+}
+
+.abonnement.twocool .content{
+  background: #bbce02;
+    background: url("https://www.keepcool.fr/tpl/img/shop/formule-two-cool.png"), #bbce02;
+background-repeat: no-repeat;
+background-position: 50% 50%;
+-webkit-background-origin: padding-box;
+background-origin: padding-box;
+-webkit-background-clip: border-box;
+background-clip: border-box;
+-webkit-background-size: 50% 50%;
+background-size: 80px ;
+  }
+
+ .abonnement .cool .content{
+  background: #8c8c8c;
+background-repeat: no-repeat;
+background-position: 50% 50%;
+-webkit-background-origin: padding-box;
+background-origin: padding-box;
+-webkit-background-clip: border-box;
+background-clip: border-box;
+-webkit-background-size: 50% 50%;
+background-size: 80px ;
+}
+
+
+.abonnement.twocool2 .content{
+  background: #e2007a;
+    background: url("https://www.keepcool.fr/tpl/img/shop/formule-two-cool.png"), #e2007a;
+    background-repeat: no-repeat;
+background-position: 50% 50%;
+-webkit-background-origin: padding-box;
+background-origin: padding-box;
+-webkit-background-clip: border-box;
+background-clip: border-box;
+-webkit-background-size: 50% 50%;
+background-size: 80px ;
+}
+
+.abonnement.cool .tarif .txt{
+  color: #fff;
+}
+
+.abonnement.cool .title .txt{
+  text-transform: uppercase;
+  font-family: 'bebas';
+  font-size: 20px;
+  color: #FFF;
+}
+
+.abonnement .content .txt img{
+  width: 197px;
+  height: auto;
+}
+
+.abonnement.twocool2 .tarif .txt{
+  color: #fff;
+}
+.abonnement.twocool2 .tarif .legal{
+  text-transform: uppercase;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+
+
+.abonnement .green{ background:#bbce02; }

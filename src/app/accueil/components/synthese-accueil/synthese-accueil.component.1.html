@@ -1,0 +1,75 @@
+<h2>Bonjour La Team!</h2>       
+<div class="row">
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                            <div class="card card-stats">
+                                <div data-background-color="rose">
+                                    <i class="material-icons">group_add</i>
+                                </div>
+                                <div class="card-content">
+                                    <p class="category">Abonnement du mois</p>
+                                    <h3 class="card-title">{{clubSynthese.nbAbosMois}}/{{clubSynthese.objectifAbosMois}}</h3>
+                                </div>
+                                <div class="card-footer">
+                                   <p class="category">
+                                        <span class="text-success"><i [ngClass]="{'fa': true, 'fa-long-arrow-up':clubSynthese.progAbosMois >=0, 'fa-long-arrow-down' :clubSynthese.progAbosMois < 0}"></i> {{clubSynthese.progAbosMois}}</span> sur N-1</p>
+                                </div>
+                            </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                            <div class="card card-stats">
+                                <div class="card-header" data-background-color="blue">
+                                    <i class="material-icons">attach_money</i>
+                                </div>
+                                <div class="card-content">
+                                    <p class="category">Encaissement du mois</p>
+                                    <h3 class="card-title">{{clubSynthese.camois | currency:'EUR':true}}</h3>
+                                </div>
+                                <div class="card-footer">
+                                     <p class="category">
+                                        <span class="text-success"><i [ngClass]="{'fa': true, 'fa-long-arrow-up':clubSynthese.progCaMois >=0, 'fa-long-arrow-down' :clubSynthese.progCaMois < 0}"></i> {{clubSynthese.progCaMois  | currency:'EUR':true}}</span> sur N-1</p>
+                               
+                                </div>
+                            </div>
+                    </div>
+
+                     <div class="col-lg-3 col-md-6 col-sm-6">
+                            <div class="card card-stats">
+                                <div class="card-header" data-background-color="green" >
+                                    <i class="material-icons">group_add</i>
+                                </div>
+                                <div class="card-content">
+                                    <p class="category">Abonnement Semaine</p>
+                                    <h3 class="card-title">{{clubSynthese.nbAbosSemaine}}</h3>
+                                </div>
+                                <div class="card-footer">
+                                   <p class="category">
+                                        <span class="text-warning"><i [ngClass]="{'fa': true, 'fa-long-arrow-up':clubSynthese.progAbosSemaine >=0, 'fa-long-arrow-down' :clubSynthese.progAbosSemaine < 0}"></i> {{clubSynthese.progAbosSemaine}}</span> sur N-1</p>
+                               
+                                </div>
+                            </div>
+                    </div>
+
+                     
+
+                     <div class="col-lg-3 col-md-6 col-sm-6">
+                            <div class="card card-stats">
+                                <div class="card-header" data-background-color="bleu">
+                                    <i class="material-icons">attach_money</i>
+                                </div>
+                                <div class="card-content">
+                                    <p class="category">Encaissement de la Semaine</p>
+                                    <h3 class="card-title">{{clubSynthese.casemaine | currency:'EUR':true}}</h3>
+                                </div>
+                                <div class="card-footer">
+                                    <p class="category">
+                                        <span class="text-warning"><i [ngClass]="{'fa': true, 'fa-long-arrow-up':clubSynthese.progCaSemaine >=0, 'fa-long-arrow-down' :clubSynthese.progCaSemaine < 0}"></i> {{clubSynthese.progCaSemaine  | currency:'EUR':true}}</span> sur N-1</p>
+                               
+                                
+                                </div>
+                            </div>
+                    </div>
+            </div>
+
+
+            

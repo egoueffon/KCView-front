@@ -1,0 +1,99 @@
+
+<md-card>
+
+    <md-card-content>
+
+        <h1>SignUp</h1>
+
+        <form (ngSubmit)="signupForm.valid && signup(signupForm.value)" #signupForm="ngForm">
+
+            <md-input-container class="">
+
+                <input mdInput
+                       type="text"
+                       placeholder="Prénom"
+                       name="firstName"
+                       [(ngModel)]="user.firstName"
+                       #firstName="ngModel"
+                       required/>
+
+                <md-error *ngIf="firstName.hasError('required')" >
+                    Veulilez saisir un prénom.
+                </md-error>
+
+            </md-input-container>
+
+
+
+            <br />
+
+            <md-input-container class="">
+
+
+                <input mdInput
+                       type="text"
+                       placeholder="Nom"
+                       name="lastName"
+                       [(ngModel)]="user.lastName"
+                       #lastName="ngModel"
+                       required />
+
+                <md-error *ngIf="lastName.hasError('required')" >
+                    Veuillez saisir le prénom.
+                </md-error>
+
+            </md-input-container>
+
+            <br />
+
+            <md-input-container class="">
+
+                <input mdInput
+                       placeholder="login"
+                       type="login"
+                       name="login"
+                       [(ngModel)]="user.login"
+                       #login="ngModel"
+                       pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$"
+                       required />
+
+                <md-error *ngIf="login.hasError('required')">
+                    Veuillez saisir un login.
+                </md-error>
+
+                <md-error *ngIf="login.hasError('pattern')">
+                    Veuillez saisir un login valide.
+                </md-error>
+
+            </md-input-container>
+
+            <br />
+
+            <md-input-container class="">
+
+                <input mdInput
+                       placeholder="Mot de passe"
+                       type="password"
+                       name="password"
+                       [(ngModel)]="user.password"
+                       #password="ngModel"
+                       required />
+
+                <md-error *ngIf="password.hasError('required')">
+                    Veuillez saisir un mot de passe.
+                </md-error>
+
+            </md-input-container>
+
+            <md-error *ngIf="error">
+                {{error}}
+            </md-error>
+
+            <br />
+            <br />
+
+            <button md-raised-button type="submit" [disabled]="signupForm.invalid">M'enregistrer</button>
+        </form>
+
+    </md-card-content>
+</md-card>

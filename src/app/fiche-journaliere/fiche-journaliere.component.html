@@ -1,0 +1,39 @@
+<div class="main-content">
+    <div class="container-fluid" style="margin-top:20px">
+        <div class="row">
+            <div class="col-md-12">
+                <app-fiche-header [syntheseFiche]="syntheseFiche" (dateUpdated)="handleDateUpdated($event)"></app-fiche-header>
+            </div>
+        </div>      
+
+        <div class="collapse navbar-collapse">
+            <ul class="nav navbar-nav navbar-right">
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                    <i class="material-icons">menu</i>
+                </a>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <a (click)="onClickAbonnement()" 
+                            routerLink="abo/2" href="javascript:void(0)"><span Class="roundbadge abonnement">A</span>  Nouvel abonnement</a>
+                        </li>
+                        <li>
+                            <a (click)="onClickAbonnement()" href="javascript:void(0)"><span Class="roundbadge regul">R</span>  <span>Régularisation</span></a>
+                        </li>
+                        <li>
+                            <a href="#"><span Class="roundbadge goodies">G</span>  <span>Goodies</span></a>
+                        </li>
+                        <li>
+                            <a href="#"><span Class="roundbadge sd">A</span>  <span>Séance découverte</span></a>
+                        </li>
+                        <li>
+                            <a href="#"><span Class="roundbadge remboursement">A</span>  <span>Remboursement</span></a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <app-users-table [operations]="syntheseFiche.fiche.listOperation">
+        </app-users-table>
+    </div>
+</div>

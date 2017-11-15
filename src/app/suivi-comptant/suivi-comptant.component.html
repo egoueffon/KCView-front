@@ -1,0 +1,118 @@
+<div class="main-content">
+  <div class="container-fluid" style="margin-top:10px;">
+    <div style="display: flex;justify-content:space-between;margin-bottom: 10px;">
+    <div style="display: flex;align-items: center;">
+      Dernier importation : {{lastImport.date_import | date:'dd-MM-yy'}} 
+      <button type="button" style="margin-left: 5px;" class="btn btn-success btn-s" (click)="openImportDialog()">nouvel Import</button>
+    </div>
+    <div style="display: flex;">
+      <ul class="nav nav-pills nav-pills-icons " style="margin-left: 5px;">
+        <li class="active">
+          <a>
+            <H3 style="color:white">{{nbSuiviEnCours}}</H3>
+            <H6 style="color:white">En cours</H6>
+          </a>
+        </li>
+      </ul>
+
+      <ul class="nav nav-pills nav-pills-icons nav-pills-validate" style="margin-left: 5px;">
+        <li class="active">
+          <a>
+            <H3 style="color:white">{{nbSuiviValidate}}</H3>
+            <H6 style="color:white">Reconduit</H6>
+          </a>
+        </li>
+      </ul>
+
+      <ul class="nav nav-pills nav-pills-icons nav-pills-cancel" style="margin-left: 5px;">
+        <li class="active">
+          <a>
+                        <H3 style="color:white">{{nbSuiviCancel}}</H3>
+            <H6 style="color:white">Abandonné</H6> 
+          </a>
+        </li>
+      </ul>
+
+    </div>
+     </div>
+
+    <div class="example-container mat-elevation-z8">
+      <div class="example-header" style="width:200px;">
+        <mat-form-field  style="width:200px;">
+          <input matInput #filter placeholder="Filtre par nom" style="width:200px;">
+          <mat-icon matSuffix>search</mat-icon>
+        </mat-form-field>
+      </div>
+
+      <mat-table #table [dataSource]="dataSource" matSort>
+
+        <!--- Note that these columns can be defined in any order.
+          The actual rendered columns are set as a property on the row definition" -->
+
+        <!-- Nom Column -->
+        <ng-container matColumnDef="nom">
+          <mat-header-cell *matHeaderCellDef mat-sort-header> nom </mat-header-cell>
+          <mat-cell *matCellDef="let element">
+            <span><b>{{element.nom_adherent}}</b> {{element.prenom_adherent}}</span>
+          </mat-cell>
+        </ng-container>
+
+        <!-- sexe Column -->
+        <ng-container matColumnDef="telephone">
+          <mat-header-cell *matHeaderCellDef style="text-align:center"> Téléphone </mat-header-cell>
+          <mat-cell *matCellDef="let element"> 0{{element.num_telephone}}</mat-cell>
+        </ng-container>
+
+        <!-- sexe Column -->
+        <ng-container matColumnDef="contrat">
+          <mat-header-cell *matHeaderCellDef mat-sort-header style="text-align:center"> Contrat </mat-header-cell>
+          <mat-cell *matCellDef="let element"> {{element.nom_contrat}}</mat-cell>
+        </ng-container>
+
+        <!-- pack Column -->
+        <ng-container matColumnDef="expiration">
+          <mat-header-cell *matHeaderCellDef mat-sort-header> Expiration </mat-header-cell>
+          <mat-cell *matCellDef="let element"> {{element.date_expiration | date:'dd-MM-yy'}}</mat-cell>
+        </ng-container>
+
+        <!-- pack Column -->
+        <ng-container matColumnDef="statut">
+          <mat-header-cell *matHeaderCellDef mat-sort-header> Statut </mat-header-cell>
+          <mat-cell *matCellDef="let element">
+            <span *ngIf="element.statut==0" Class="roundbadge actual">A relancer</span>
+            <span *ngIf="element.statut==1" Class="roundbadge validate">Inscrit</span>
+            <span *ngIf="element.statut==2" Class="roundbadge cancel">Abandonné</span>
+          </mat-cell>
+        </ng-container>
+
+        <!-- pack Column -->
+        <ng-container matColumnDef="derniereRelance">
+          <mat-header-cell *matHeaderCellDef mat-sort-header> Dernière relance </mat-header-cell>
+          <mat-cell *matCellDef="let element"> {{element.dateDerniereRelance | date:'dd-MM-yy'}}</mat-cell>
+        </ng-container>
+
+        <!-- pack Column -->
+        <ng-container matColumnDef="nbRelance">
+          <mat-header-cell *matHeaderCellDef mat-sort-header> Relances </mat-header-cell>
+          <mat-cell *matCellDef="let element"> {{element.relances.length}}</mat-cell>
+        </ng-container>
+
+        <!-- pack Column -->
+        <ng-container matColumnDef="action">
+          <mat-header-cell *matHeaderCellDef style="text-align:center"> Action </mat-header-cell>
+          <mat-cell *matCellDef="let element">
+            <button type="button" *ngIf="element.statut==0" class="btn btn-primary btn-circle btn-sm" (click)=openAjouterRelanceDialog(element)><i class="fa fa-reply" matTooltip="Ajouter une relance"></i> </button>
+            <button type="button" *ngIf="element.statut==0" class="btn btn-info btn-circle btn-sm" (click)=validateClickHandler(element)><i class="fa fa-check" matTooltip="Adhérent reconduit"></i> </button>
+            <button type="button" *ngIf="element.statut==0" class="btn btn-warning btn-circle btn-sm" (click)=cancelClickHandler(element)><i class="fa fa-times" matTooltip="Adhérent abandonné"></i> </button>
+          </mat-cell>
+        </ng-container>
+
+
+        <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+        <mat-row (dblclick)="openListeRelanceDialog(row)" *matRowDef="let row; columns: displayedColumns;" [ngClass]="{'row-validated':row['statut'] == 1, 'row-canceled':row['statut'] ==2, myrow:true}"></mat-row>
+      </mat-table>
+    </div>
+  </div>
+</div>
+
+<simple-notifications></simple-notifications>

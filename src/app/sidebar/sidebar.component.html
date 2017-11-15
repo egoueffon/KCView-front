@@ -1,0 +1,90 @@
+<div class="logo">
+    <div class="logo-normal">
+        <a href="https://www.keepcool.fr" class="simple-text">
+                    Keep Cool
+                </a>
+    </div>
+
+    <!-- <div class="logo-img">
+                <img src="/assets/img/angular2-logo-white.png"/>
+            </div> -->
+</div>
+
+
+<div class="sidebar-wrapper">
+    <div class="user">
+        <div class="photo">
+            <img src="http://demos.creative-tim.com/material-dashboard-pro/assets/img/faces/avatar.jpg" />
+        </div>
+        <div class="info">
+            <a data-toggle="collapse" href="#collapseExample" class="collapsed">
+                            {{currentUser?.prenom}} {{currentUser?.nom}}
+                            <b class="caret"></b>
+                        </a>
+            <div class="collapse" id="collapseExample">
+                <ul class="nav">
+                    <li>
+                        <a href="#">My Profile</a>
+                    </li>
+                    <li>
+                        <a href="#">Edit Profile</a>
+                    </li>
+                    <li>
+                        <a href="#">Settings</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <ul class="nav">
+        <li class="active">
+            <a routerLink="/accueil">
+                            <i class="material-icons">dashboard</i>
+                            <p>Accueil</p>
+                        </a>
+        </li>
+
+        <li>
+            <a routerLink="/fiche">
+                            <i class="material-icons">dashboard</i>
+                            <p>Fiche Journalière</p>
+                        </a>
+        </li>
+
+        <li>
+            <a routerLink="/fiche/abo">
+                            <i class="material-icons">dashboard</i>
+                            <p>abonnement</p>
+                        </a>
+        </li>
+
+        <li>
+            <a routerLink="/suiviComptant">
+                            <i class="material-icons">dashboard</i>
+                            <p>suivi Comptant</p>
+                        </a>
+        </li>
+
+        <li>
+            <a data-toggle="collapse" href="#componentsExamples">
+                            <i class="material-icons">apps</i>
+                            <p>Liens Utiles
+                                <b class="caret"></b>
+                            </p>
+                        </a>
+            <div class="collapse" id="componentsExamples">
+                <ul class="nav">
+                    <li>
+                        <a [routerLink]="['/kcLink', 'https:www.teamkch.fr']">TeamKCH</a>
+                    </li>
+                    <li>
+                        <a [routerLink]="['/kcLink', 'https:www.gymlib.com']">Gymlib</a>
+                    </li>
+                    <li>
+                        <a [routerLink]="['/kcLink', 'https:www.payzen.eu']">Payzen</a>
+                    </li>
+                </ul>
+            </div>
+        </li>
+    </ul>
+</div>

@@ -1,0 +1,221 @@
+.card-body{padding: 5px;}
+
+ .stylish-table tbody tr:hover, .stylish-table tbody tr.active {
+  border-left: 4px solid #1e88e5;
+}
+
+.stylish-table thead th {
+  font-weight: 200 !important;
+ color: #99abb4;}
+
+.stylish-table tbody tr {
+  border-left: 4px solid #ffffff; }
+  .stylish-table tbody tr:hover, .stylish-table tbody tr.active {
+    border-left: 4px solid #009efb; }
+
+.stylish-table tbody td {
+  vertical-align: middle; }
+  .stylish-table tbody td h6 {
+    font-weight: 500;
+    margin-bottom: 0px;
+    white-space: nowrap; }
+  .stylish-table tbody td small {
+    line-height: 12px;
+    white-space: nowrap; }
+
+    /*******************
+Rounds
+*******************/
+.round {
+  line-height: 48px;
+  color: #ffffff;
+  width: 45px;
+  height: 45px;
+  display: inline-block;
+  font-weight: 400;
+  text-align: center;
+  border-radius: 100%;
+  background: #1e88e5; }
+  .round img {
+    border-radius: 100%; }
+
+.round-lg {
+  line-height: 65px;
+  width: 60px;
+  height: 60px;
+  font-size: 30px; }
+
+.round.round-info {
+  background: #1e88e5; }
+
+.round.round-warning {
+  background: #ffb22b; }
+
+.round.round-danger {
+  background: #fc4b6c; }
+
+.round.round-success {
+  background: #26c6da; }
+
+.round.round-primary {
+  background: #7460ee; }
+
+  /*******************
+Table Cell
+*******************/
+.table-box {
+  display: table;
+  width: 100%; }
+
+.table.no-border tbody td {
+  border: 0px; }
+
+.cell {
+  display: table-cell;
+  vertical-align: middle; }
+
+.table td, .table th {
+  border-color: #f3f1f1; }
+
+.table thead th, .table th {
+  font-weight: 500; }
+
+.table-hover tbody tr:hover {
+  background: #f2f4f8; }
+
+.v-middle td, .v-middle th {
+  vertical-align: middle; }
+
+.table-responsive {
+  display: block;
+  width: 100%;
+  overflow-x: auto;
+  -ms-overflow-style: -ms-autohiding-scrollbar; }
+
+   /*******************
+Margin
+*******************/
+.m-0 {
+  margin: 0px; }
+
+.m-l-5 {
+  margin-left: 5px; }
+
+.m-l-10 {
+  margin-left: 10px; }
+
+.m-l-15 {
+  margin-left: 15px; }
+
+ .m-l-20 {
+  margin-left: 20px; }
+
+.m-l-30 {
+  margin-left: 30px; }
+
+ .m-l-40 {
+  margin-left: 40px; }
+
+ .m-r-5 {
+  margin-right: 5px; }
+
+.m-r-10 {
+  margin-right: 10px; }
+
+ .m-r-15 {
+  margin-right: 15px; }
+
+ .m-r-20 {
+  margin-right: 20px; }
+
+ .m-r-30 {
+  margin-right: 30px; }
+
+ .m-r-40 {
+  margin-right: 40px; }
+
+.m-t-0 {
+  margin-top: 0px; }
+
+ .m-t-5 {
+  margin-top: 5px; }
+
+.m-t-10 {
+  margin-top: 10px; }
+
+ .m-t-15 {
+  margin-top: 15px; }
+
+.m-t-20 {
+  margin-top: 20px; }
+
+.m-t-30 {
+  margin-top: 30px; }
+
+.m-t-40 {
+  margin-top: 40px; }
+
+.m-b-0 {
+  margin-bottom: 0px; }
+
+.m-b-5 {
+  margin-bottom: 5px; }
+
+.m-b-10 {
+  margin-bottom: 10px; }
+
+.m-b-15 {
+  margin-bottom: 15px; }
+
+.m-b-20 {
+  margin-bottom: 20px; }
+
+  .p-t-0{
+    padding: 0px;
+  }
+
+
+/*******************
+Headings
+*******************/
+h1,
+h2,
+h3,
+h4,
+h5,
+ {
+  color: #455a64;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400; }
+
+h1 {
+  line-height: 40px;
+  font-size: 36px; }
+
+h2 {
+  line-height: 36px;
+  font-size: 24px; }
+
+h3 {
+  line-height: 30px;
+  font-size: 21px; }
+
+h4 {
+  line-height: 22px;
+  font-size: 18px; }
+
+h5 {
+  line-height: 18px;
+  font-size: 16px;
+  font-weight: 400; }
+
+ h6{
+  line-height: 16px;
+  font-size: 14px;
+  font-weight: 400; }
+
+
+    .contour{
+    border-bottom-width: 1px;
+    border-style: solid;
+  }

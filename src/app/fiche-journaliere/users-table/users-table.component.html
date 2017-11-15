@@ -1,0 +1,104 @@
+
+  <div class="example-container mat-elevation-z8">
+    <mat-table #table [dataSource]="dataSource">
+
+      <!--- Note that these columns can be defined in any order.
+          The actual rendered columns are set as a property on the row definition" -->
+
+      <!-- Nom Column -->
+      <ng-container matColumnDef="nom">
+        <mat-header-cell *matHeaderCellDef> Nom </mat-header-cell>
+        <mat-cell *matCellDef="let element">
+          <span><b>{{element.nom}}</b> {{element.prenom}}</span>
+        </mat-cell>
+      </ng-container>
+
+      <!-- type Column -->
+      <ng-container matColumnDef="type">
+        <mat-header-cell *matHeaderCellDef> Type </mat-header-cell>
+        <mat-cell *matCellDef="let element">
+          <span *ngIf="element.type==='abonnement'" Class="roundbadge abonnement">A</span>
+          <span *ngIf="element.type==='regul'" Class="roundbadge regul">R</span>
+          <span *ngIf="element.type==='sd'" Class="roundbadge sd">SD</span>
+          <span *ngIf="element.type==='goodies'" Class="roundbadge goodies">G</span>
+          <span *ngIf="element.type==='remboursement'" Class="roundbadge remboursement">R</span>
+        </mat-cell>
+      </ng-container>
+
+      <!-- sexe Column -->
+      <ng-container matColumnDef="sexe">
+        <mat-header-cell *matHeaderCellDef> H/F </mat-header-cell>
+        <mat-cell *matCellDef="let element"> {{element.sexe}}</mat-cell>
+      </ng-container>
+
+      <!-- sexe Column -->
+      <ng-container matColumnDef="source">
+        <mat-header-cell *matHeaderCellDef> Source </mat-header-cell>
+        <mat-cell *matCellDef="let element"> {{element.source}}</mat-cell>
+      </ng-container>
+
+      <!-- sexe Column -->
+      <ng-container matColumnDef="qualite">
+        <mat-header-cell *matHeaderCellDef> Qualite </mat-header-cell>
+        <mat-cell *matCellDef="let element">
+          <span [ngClass]="{badgeEric:true, badgeLib: element.qualite === 'Lib', badgeTC: element.qualite === 'TC', badgeEmpty:element.qualite == null}">{{element.qualite}}</span>
+        </mat-cell>
+      </ng-container>
+
+      <!-- pack Column -->
+      <ng-container matColumnDef="pack">
+        <mat-header-cell *matHeaderCellDef> Pack </mat-header-cell>
+        <mat-cell *matCellDef="let element">
+          {{element.pack |currency:'EUR':true}}
+        </mat-cell>
+      </ng-container>
+
+      <!-- pack Column -->
+      <ng-container matColumnDef="montant_abo">
+        <mat-header-cell *matHeaderCellDef> montant abo </mat-header-cell>
+        <mat-cell *matCellDef="let element">
+          {{element.montant_abo |currency:'EUR':true}}
+        </mat-cell>
+      </ng-container>
+
+      <!-- pack Column -->
+      <ng-container matColumnDef="montant_encaisse">
+        <mat-header-cell *matHeaderCellDef> montant encaisse </mat-header-cell>
+        <mat-cell *matCellDef="let element">
+          <div *ngFor="let e of element.encaissements">
+            <span>{{e.montant_encaisse |currency:'EUR':true}}</span>
+          </div>
+        </mat-cell>
+      </ng-container>
+
+       <!-- pack Column -->
+      <ng-container matColumnDef="mode_versement">
+        <mat-header-cell *matHeaderCellDef> mode versement </mat-header-cell>
+        <mat-cell *matCellDef="let element">
+          <div *ngFor="let e of element.encaissements">
+            <span>{{e.mode_versement}}</span>
+          </div>
+        </mat-cell>
+      </ng-container>
+
+      <!-- rvp Column -->
+      <ng-container matColumnDef="rvp">
+        <mat-header-cell *matHeaderCellDef> rvp </mat-header-cell>
+        <mat-cell *matCellDef="let element">
+          <i *ngIf="element.rvp" class="material-icons">check</i>
+        </mat-cell>
+      </ng-container>
+
+      <!-- rvp Column -->
+      <ng-container matColumnDef="pea">
+        <mat-header-cell *matHeaderCellDef> pea </mat-header-cell>
+        <mat-cell *matCellDef="let element">
+          {{element.pea |currency:'EUR':true}}
+        </mat-cell>
+      </ng-container>
+
+
+      <mat-header-row *matHeaderRowDef="displayedColumns" class="example-row"></mat-header-row>
+      <mat-row *matRowDef="let row; columns: displayedColumns;" class="example-row"></mat-row>
+    </mat-table>
+  </div>

@@ -1,0 +1,47 @@
+<div class="modal-dialog modal-sm" style="width:390px">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h4 class="modal-title pull-left">Régularisation</h4>
+        </div>
+
+        <div class="modal-body">
+
+            <form (ngSubmit)="update(regulForm.value)" #regulForm="ngForm" style="width:350px">
+
+                <mat-checkbox name="chkImpaye" #chkImpaye="ngModel" [(ngModel)]="impaye">Impayé</mat-checkbox>
+
+
+
+                <mat-form-field class="example-full-width">
+                    <input mdInput placeholder="Nom" name="nom" #nom="ngModel" type="text" [(ngModel)]="operation.nom" required />
+                </mat-form-field>
+
+                <mat-form-field class="example-full-width">
+                    <input mdInput placeholder="Prénom" name="prenom" #prenom="ngModel" type="text" [(ngModel)]="operation.prenom" required />
+                </mat-form-field>
+
+                <div layout="row">
+                    <mat-form-field class="example-full-width">
+                        <input mdInput placeholder="Montant" name="montant" #montant="ngModel" type="text" [(ngModel)]="encaissement.montant_encaisse"
+                            (keypress)="_keyPress($event)" required />
+                    </mat-form-field>
+
+                    <select class="selectpicker" data-width="145px" data-style="btn btn-primary btn-round" title="Mode" data-size="7">
+                                            <option disabled selected>CB</option>
+                                            <option value="2">Espece</option>
+                                            <option value="3">Cheque</option>
+                                        </select>
+
+
+
+                </div>
+            </form>
+
+             <div class="modal-footer"> 
+    <button class="btn btn-rose btn-fill" (click)="dialogRef.close()">Annuler</button>
+    <button class="btn btn-rose btn-fill" (click)="update()">Valider</button>
+
+</div>
+        </div>
+    </div>
+</div>

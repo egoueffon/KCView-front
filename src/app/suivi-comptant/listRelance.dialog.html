@@ -1,0 +1,19 @@
+<h6 mat-dialog-title>Relance de {{data.suivi.prenom_adherent}} {{data.suivi.nom_adherent}}</h6>
+<div mat-dialog-content style="height: 300px">
+    <div *ngFor="let item of data.suivi.relances; index as i;" 
+    [ngClass]="{'alert': true, 'alert-with-icon': true, 'alert-warning': item.type==0, 'alert-success': item.type==1, 'alert-primary': item.type==2 }"
+    class="alert alert-warning alert-with-icon" data-notify="container">
+        <i *ngIf="item.type==0" class="material-icons" data-notify="icon">phone</i>
+        <i *ngIf="item.type==1" class="material-icons" data-notify="icon">message</i>
+        <i *ngIf="item.type==2" class="material-icons" data-notify="icon">email</i>
+        <span>{{item.date_relance | date:'dd-MM-yy'}}</span>
+        <span data-notify="message">{{item.commentaire}}</span>
+        
+    </div>
+</div>
+
+
+
+<div mat-dialog-actions align="end">
+    <button mat-button (click)="onNoClick()" tabindex="-1">OK</button>
+</div>

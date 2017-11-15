@@ -1,0 +1,130 @@
+<!-- ============================================================== -->
+<!-- Bread crumb and right sidebar toggle -->
+<!-- ============================================================== -->
+<div class="row page-titles">
+    <div class="col-md-5 col-8 align-self-center">
+        <h3 class="text-themecolor m-b-0 m-t-0">Accueil</h3>
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="javascript:void(0)">Home</a></li>
+            <li class="breadcrumb-item active">Accueil</li>
+        </ol>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-lg-4 col-xlg-3 col-md-5">
+        <app-card-prevision-abos [syntheseClub]="clubSynthese"></app-card-prevision-abos>
+    </div>
+
+
+
+    <div class="col-lg-4 col-xlg-3 col-md-5">
+        <app-card-prevision-ca [syntheseClub]="clubSynthese"></app-card-prevision-ca>
+    </div>
+
+    <div class="col-lg-4 col-xlg-3 col-md-5">
+        <div class="card card-body" style="height: 320px;">
+
+            <!-- Row -->
+            <h4 class="card-title">Votre Panier Moyen</h4>
+            <div class="table-responsive m-t-20">
+                <table class="table stylish-table">
+                    <thead>
+                        <tr>
+                            <th colspan="3" style="width:100%">Période</th>
+                            <th colspan="2" align="center">PM</th>
+                            <th align="center">N-1</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td style="width:50px;"><span class="round">Jour</span></td>
+                            <td></td>
+                            <td></td>
+                            <td align="center">110.2€</td>
+                            <td></td>
+                            <td align="center">350.9€</td>
+                        </tr>
+
+                        <tr>
+                            <td style="width:50px;"><span class="round round-warning">Sem</span></td>
+                            <td></td>
+                            <td></td>
+                            <td align="center">99€</td>
+                            <td></td>
+                            <td align="center">125.9€</td>
+                        </tr>
+
+                        <tr>
+                            <td style="width:50px;"><span class="round round-success">Mois</span></td>
+                            <td></td>
+                            <td></td>
+                            <td align="center">103.5€</td>
+                            <td></td>
+                            <td align="center">125.3€</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="row">
+
+    <div class="col-lg-8 col-md-7">
+        <div class="card card-body" style="height: 350px;">
+            <!-- Row -->
+            <h4 class="card-title">Votre Passage</h4>
+            <div class="table-responsive m-t-20">
+                <table class="table stylish-table">
+                    <thead>
+                        <tr>
+                            <th style="text-align:center">Période</th>
+                            <th style="text-align:center" align="center">VPs</th>
+                            <th style="text-align:center" align="center">Passage</th>
+                            <th style="text-align:center" align="center">VPs N-1</th>
+                            <th style="text-align:center" align="center">Passage N-1</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td align="center"><span class="round">Jour</span></td>
+                            <td align="center"></td>
+                            <td align="center"></td>
+                            <td align="center">12</td>
+                            <td align="center">350.9€</td>
+                        </tr>
+
+                        <tr>
+                            <td align="center"><span class="round round-warning">Sem</span></td>
+                            <td align="center"></td>
+                            <td align="center"></td>
+                            <td align="center">110</td>
+                            <td align="center">12000.9€</td>
+                        </tr>
+
+                        <tr>
+                            <td align="center"><span class="round  round-success">Mois</span></td>
+                            <td align="center"></td>
+                            <td align="center"></td>
+                            <td align="center">350</td>
+                            <td align="center">50365,8€</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-lg-4 col-md-5">
+
+        <div class="card" style="height: 350px;">
+            <div class="card-body">
+                <h4 class="card-title">TC</h4>
+                <div id="visitor" style="height:290px; width:100%;"></div>
+            </div>
+        </div>
+    </div>
+</div>

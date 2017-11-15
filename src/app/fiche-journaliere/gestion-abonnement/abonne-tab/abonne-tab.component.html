@@ -1,0 +1,238 @@
+<mat-horizontal-stepper [linear]="isLinear">
+    <mat-step [stepControl]="firstFormGroup">
+        <form [formGroup]="firstFormGroup" novalidate class="example-container">
+            <ng-template matStepLabel>Abonné</ng-template>
+
+            <section>
+                <section class="example-section2">
+                    <div class="example-section3">
+                        <mat-radio-group formControlName="sexe">
+                            <mat-radio-button value="H">H</mat-radio-button>
+                            <mat-radio-button value="F">F</mat-radio-button>
+                        </mat-radio-group>
+                    </div>
+
+                    <div class="example-section4">
+
+                        <div class="example-section5">
+                            <mat-slide-toggle class="example-margin" [color]="color" [checked]="checked" [disabled]="disabled">
+                                RVP
+                            </mat-slide-toggle>
+                            <mat-slide-toggle class="example-margin" [color]="color" [checked]="checked" [disabled]="disabled">
+                                Reconduction
+                            </mat-slide-toggle>
+                        </div>
+                    </div>
+                </section>
+
+                <div class="section-column">
+                    <mat-form-field class="example-full-width">
+                        <span matPrefix><i class="material-icons">face</i></span>
+                        <input matInput formControlName="first" placeholder="Prénom" />
+                    </mat-form-field>
+
+                    <mat-form-field class="example-full-width">
+                        <span matPrefix><i class="material-icons">face</i></span>
+                        <input matInput formControlName="last" placeholder="Nom" />
+                    </mat-form-field>
+
+
+                    <mat-form-field>
+                        <span matPrefix><i class="material-icons">public</i></span>
+                        <mat-select placeholder="Source" formControlName="source">
+                            <mat-option *ngFor="let source of sources" [value]="source.value">
+                                {{ source.viewValue }}
+                            </mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                </div>
+            </section>
+            <section class="buttonDivEnd">
+                <button mat-raised-button matStepperNext color="primary">Suivant</button>
+            </section>
+
+
+        </form>
+    </mat-step>
+
+    <!--/////////////////////////////////////////////////////////////////////////////////////////////
+    /////Formule
+    ///////////////////////////////////////////////////////////////////////////////////////////// -->
+
+    <mat-step [stepControl]="formuleFormGroup">
+        <form [formGroup]="formuleFormGroup" novalidate class="example-container">
+            <ng-template matStepLabel>Formule</ng-template>
+
+            <section>
+
+                <section class="example-section">
+                    <mat-button-toggle-group #group="matButtonToggleGroup" class="essai" (change)=formuleChangeEvent($event)>
+                        <mat-button-toggle *ngFor="let formule of club.formuleClub" class="button-toggle-formule" [value]="formule">
+                            {{ formule.formule.nomFormule}}
+                        </mat-button-toggle>
+                    </mat-button-toggle-group>
+                </section>
+
+                <section class="cptSection">
+
+
+                    <!-- <mat-slide-toggle class="example-margin" formControlName="comptant" [color]="color" [checked]="checked" [disabled]="disabled"
+                        (change)=comptantChangeEvent($event)>
+                        COMPTANT
+                    </mat-slide-toggle> -->
+
+                    <div class="choixcpt" *ngIf="group.value &&  group.value.pack > 0"><label>Comptant :</label>
+                        <p-inputSwitch formControlName="comptant" (onChange)=comptantChangeEvent($event) onLabel="Oui" offLabel="Non"></p-inputSwitch>
+                    </div>
+
+
+
+                    <section class="dureeSection" *ngIf="group.value && (operation.comptant || group.value.pack == 0)">
+                        <label class="example-margin">DUREE :</label>
+                        <mat-button-toggle-group class="buttonGroup" formControlName="duree" (change)=dureeChangeEvent($event)>
+                            <mat-button-toggle *ngFor="let item of group.value.formule.durees" [value]="item.duree">
+                                {{ item.duree}}
+                            </mat-button-toggle>
+                        </mat-button-toggle-group>
+                    </section>
+                </section>
+
+
+                <section class="starterSection" *ngIf="group.value && group.value.pack > 0; else elseBlock">
+                    <label class="example-margin">STARTER PROGRAM :</label>
+
+                    <mat-button-toggle-group class="buttonGroup" *ngIf="group.value; else elseBlock" formControlName="starter" (change)=packChangeEvent($event)>
+                        <mat-button-toggle *ngFor="let pack of club.packs" [value]="pack.value">
+                            {{ pack.value }}
+                        </mat-button-toggle>
+                    </mat-button-toggle-group>
+                </section>
+
+                <ng-template #elseBlock> <label>Pas de Starter Program sur cette formule</label></ng-template>
+
+                <div class="offreSection" *ngIf="group.value &&  group.value.pack > 0">
+                    <section class="moisOffertSection">
+                        <label class="example-margin">MOIS OFFERT :</label>
+                        <mat-button-toggle-group class="buttonGroup" (change)=moisOffertChangeEvent($event) formControlName="nbMoisOffert">
+                            <mat-button-toggle class="test" value="0">0</mat-button-toggle>
+                            <mat-button-toggle class="test" value="1">1</mat-button-toggle>
+                            <mat-button-toggle class="test" value="2">2</mat-button-toggle>
+                        </mat-button-toggle-group>
+                        <!-- <label class="example-margin"> DIFFÉRÉ ?</label>
+
+                        <mat-slide-toggle class="example-margin" 
+                        [color]="color" [checked]="checked" [disabled]="disabled"
+                        formControlName="diferreControl"
+                        (change)=diferreChangeEvent($event)>
+                        </mat-slide-toggle> -->
+
+                        <div class="choixcpt"><label>DIFFÉRÉ :</label>
+                            <p-inputSwitch formControlName="diferreControl" (onChange)=diferreChangeEvent($event) onLabel="Oui" offLabel="Non"></p-inputSwitch>
+                        </div>
+                    </section>
+
+                    <section class="offreSuppSection">
+
+                        <mat-form-field>
+                            <input matInput formControlName="offreSupp" placeholder="Offre supplémentaire" type="number" (input)=offreSuppChangeEvent($event)
+                                class="example-right-align" />
+                            <span matSuffix>€</span>
+                        </mat-form-field>
+                    </section>
+                </div>
+
+                <section class="montantSection" *ngIf="group.value &&  group.value.pack == 0">
+
+                    <mat-form-field class="example-full-width">
+                        <input matInput formControlName="montant" placeholder="Montant" 
+                        (input)=montantAboAutreChangeEvent($event)
+                        type="number" class="example-right-align" />
+                        <span matSuffix>€</span>
+                    </mat-form-field>
+                </section>
+            </section>
+
+            <section class="spaceButtonDiv">
+                <button mat-raised-button matStepperPrevious color="primary">Précédent</button>
+                <button mat-raised-button matStepperNext color="primary">Suivant</button>
+            </section>
+        </form>
+    </mat-step>
+
+    <!--/////////////////////////////////////////////////////////////////////////////////////////////
+    /////PAIEMENT
+    ///////////////////////////////////////////////////////////////////////////////////////////// -->
+
+    <mat-step [stepControl]="paiementFormGroup">
+        <form [formGroup]="paiementFormGroup" novalidate class="example-container">
+            <ng-template matStepLabel>Paiement</ng-template>
+
+            <section class="flexRow flexEnd" style="width:100%">
+                <div class="flexCol" style="width:200px">
+                    <div><label style="float:right;">Montant de l'abonnement:</label></div>
+                    <div> <label style="float:right;">Montant de l'offre :</label></div>
+                    <div> <label style="float:right;">Montant à payer :</label></div>
+                </div>
+                <div class="flexCol" style="width:100px">
+                    <div><label style="float:right;">{{montantAbo}} Eur</label></div>
+                    <div><label style="float:right;">{{montantOffre}} Eur</label></div>
+                    <div><label style="float:right;">{{montantAPayer}} Eur</label></div>
+                </div>
+            </section>
+
+            <section>
+                <section class="flexRow">
+                    <div class="cardEncaissement">
+                        <div class="btnAbs">
+                            <button mat-mini-fab color="accent" (click)=addEncaissement()>
+                                 <i class="fa fa-plus" aria-hidden="true"></i>
+                            </button>
+                            <!-- <button pButton type="button" (click)=addEncaissement() icon="fa-plus"></button> -->
+                        </div>
+                        <div class="card-header bg-info">
+                            <h4 class="text-white card-title">Mes Encaissements</h4>
+                            <h6 class="card-subtitle text-white op-5">Ajoutez ici vos encaissements</h6>
+                        </div>
+                        <div class="card-body">
+                            <div *ngFor="let encaissement of encaissements; let in = index">
+                                <div class="encaissement">
+                                    <div class="ui-inputgroup">
+                                        <input class="example-right-align" type="text" [value]="encaissement.montant_encaisse" (input)="encaissementChangeEvent(encaissement, $event)"
+                                            type="number" pInputText placeholder="Montant">
+                                        <span class="ui-inputgroup-addon"><i class="fa fa-eur"></i></span>
+                                    </div>
+                                    <p-dropdown [options]="payments" placeholder="mode" [style]="{'width':'100px'}"></p-dropdown>
+
+                                    <button pButton type="button" (click)="deleteEncaissement(encaissement)" icon="fa-minus"></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="cardEncaissement">
+                        <div class="card-header bg-info">
+                            <h4 class="text-white card-title">En attente</h4>
+                             <h6 class="card-subtitle text-white op-5">Que manque t'il au dossier</h6>
+                        </div>
+                        <div>
+                            <label>Il manque le RIB :</label>
+                            <mat-slide-toggle class="example-margin" [color]="color" [checked]="checked" [disabled]="disabled">
+                            </mat-slide-toggle>
+                        </div>
+                        <div>
+                             <label>Paiement en attente : {{montantAPayer - montantEncaisser}} Eur</label>
+                        </div>
+                    </div>
+                </section>
+
+            </section>
+            <section class="spaceButtonDiv">
+                <button mat-raised-button matStepperPrevious color="primary">Précédent</button>
+                <button mat-raised-button color="primary" (click)=finish()>Terminer</button>
+            </section>
+        </form>
+
+    </mat-step>
+
+</mat-horizontal-stepper>

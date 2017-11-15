@@ -1,0 +1,95 @@
+.card-contentFicheEncaissement {
+  position: relative;
+  padding-top: 10px;
+  height: 100px;
+}
+
+
+.icon32{
+    height: 16px;
+    width: 16px;
+}
+
+.vertical{
+    display:inline-block;
+    padding-bottom: 5px;
+      right: 0px;;
+}
+
+
+
+.labelgris{
+ color: #999999;
+  font-size: 13px;
+  padding-left: 10px;
+}
+
+.nbPrincipal{
+  font-size: 24px;
+  padding-left: 10px;
+}
+
+.bottom{    
+  padding-left: 5px;
+}
+
+.coin{
+  padding-right: 5px;
+}
+
+.cheque{
+  padding-right: 5px;
+}
+
+.cb{
+  padding-right: 5px;
+}
+
+.dateSelectorContent{
+  padding-top: 20px;
+  padding-left: 15px;
+}
+
+.bg-info {
+  background-color:lightblue !important; }
+
+  /*******************/
+/*Feed widget*/
+/*******************/
+.feeds {
+  margin: 0px;
+  padding: 0px; }
+  
+  .feeds li {
+    list-style: none;
+    padding: 5px;
+    vertical-align: middle;
+    
+   }
+
+    .feeds li > div {
+      width: 30px;
+      height: 30px;
+      margin-right: 5px;
+      display: inline-block;
+      text-align: center;
+      vertical-align: middle;
+      border-radius: 10%; }
+      .feeds li > div i {
+        line-height: 30px; }
+    .feeds li span {
+      float: right;
+      width: auto;
+      font-size: 16px;
+    color: black }
+
+      ul li span{ 
+  display: block;  
+  padding: 5px 10px 5px 10px; 
+
+}
+
+
+      .text-white {
+  color: grey !important; }
+

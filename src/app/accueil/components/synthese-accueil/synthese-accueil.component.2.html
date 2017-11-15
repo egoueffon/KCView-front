@@ -1,0 +1,206 @@
+<!-- ============================================================== -->
+<!-- Bread crumb and right sidebar toggle -->
+<!-- ============================================================== -->
+<div class="row page-titles">
+    <div class="col-md-5 col-8 align-self-center">
+        <h3 class="text-themecolor m-b-0 m-t-0">Accueil</h3>
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="javascript:void(0)">Home</a></li>
+            <li class="breadcrumb-item active">Accueil</li>
+        </ol>
+    </div>
+
+</div>
+<div class="row">
+    <div class="col-md-4">
+        <div class="card card-body">
+            <div class="mycard-content">      
+                <div class="col p-r-0 align-self-center">
+                    <h2 class="font-light m-b-0" style="padding: 0px;margin: 0px;">{{clubSynthese.nbAbosMois}}/{{clubSynthese.objectifAbosMois}}</h2>
+                    <h6 class="text-muted category" style="padding: 0px;margin: 0px;">Abos sur le mois</h6>
+                </div>
+                <div style="padding-top:0px" ><div class="css-bar m-b-0 css-bar-info css-bar-54" data-label="60%"></div></div>
+            </div>
+            <div class="card-footer" style="margin-top:5px">
+                <p class="category">
+                    <span class="text-success"><i [ngClass]="{'fa': true, 'fa-long-arrow-up':clubSynthese.progAbosMois >=0, 'fa-long-arrow-down' :clubSynthese.progAbosMois < 0}"></i> {{clubSynthese.progAbosMois}}</span> sur N-1</p>
+            </div>
+        </div>
+    </div>
+
+     <div class="col-md-4">
+        <div class="card card-body">
+            <div class="mycard-content">      
+                <div class="col p-r-0 align-self-center">
+                    <h2 class="font-light m-b-0" style="padding: 0px;margin: 0px;">50</h2>
+                    <h6 class="text-muted category" style="padding: 0px;margin: 0px;">Visites perdues du mois</h6>
+                </div>
+                <!-- <div style="padding-top:0px" ><div class="css-bar m-b-0 css-bar-info css-bar-54" data-label="85%"></div></div> -->
+            </div>
+            <div class="card-footer" style="margin-top:5px">
+                <p class="category">
+                    <span class="text-success"><i [ngClass]="{'fa': true, 'fa-long-arrow-up':clubSynthese.progAbosMois >=0, 'fa-long-arrow-down' :clubSynthese.progAbosMois < 0}"></i> {{clubSynthese.progAbosMois}}</span> sur N-1</p>
+            </div>
+        </div>
+    </div>
+
+     <div class="col-md-4">
+        <div class="card card-body">
+            <div class="mycard-content">      
+                <div class="col p-r-0 align-self-center">
+                    <h2 class="font-light m-b-0" style="padding: 0px;margin: 0px;">260</h2>
+                    <h6 class="text-muted category" style="padding: 0px;margin: 0px;">Visites du mois</h6>
+                </div>
+                <!-- <div style="padding-top:0px" ><div class="css-bar m-b-0 css-bar-info css-bar-54" data-label="10%"></div></div> -->
+            </div>
+             <div class="card-footer" style="margin-top:5px">
+                <p class="category">
+                    <span class="text-success"><i [ngClass]="{'fa': true, 'fa-long-arrow-up':clubSynthese.progAbosMois >=0, 'fa-long-arrow-down' :clubSynthese.progAbosMois < 0}"></i> {{clubSynthese.progAbosMois}}</span> sur N-1</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- <div class="col-lg-3 col-md-6 col-sm-6">
+        <div class="card card-stats">
+            <div class="card-header" data-background-color="green">
+                <i class="material-icons">group_add</i>
+            </div>
+            <div class="card-content">
+                <p class="category">Abonnement Semaine</p>
+                <h3 class="card-title">{{clubSynthese.nbAbosSemaine}}</h3>
+            </div>
+            <div class="card-footer">
+                <p class="category">
+                    <span class="text-warning"><i [ngClass]="{'fa': true, 'fa-long-arrow-up':clubSynthese.progAbosSemaine >=0, 'fa-long-arrow-down' :clubSynthese.progAbosSemaine < 0}"></i> {{clubSynthese.progAbosSemaine}}</span>                    sur N-1</p>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="col-lg-3 col-md-6 col-sm-6">
+        <div class="card card-stats">
+            <div class="card-header" data-background-color="bleu">
+                <i class="material-icons">attach_money</i>
+            </div>
+            <div class="card-content">
+                <p class="category">Encaissement Semaine</p>
+                <h3 class="card-title">{{clubSynthese.casemaine | currency:'EUR':true}}</h3>
+            </div>
+            <div class="card-footer">
+                <p class="category">
+                    <span class="text-warning"><i [ngClass]="{'fa': true, 'fa-long-arrow-up':clubSynthese.progCaSemaine >=0, 'fa-long-arrow-down' :clubSynthese.progCaSemaine < 0}"></i> {{clubSynthese.progCaSemaine  | currency:'EUR':true}}</span>                    sur N-1</p>
+
+
+            </div>
+        </div>
+    </div>
+
+
+ -->
+
+</div>
+
+<div class="row">
+    <div style="display: flex;  justify-content: space-between;
+  width: 100%;">
+        <div class="cardSource">
+            <div class="card-body">
+                <div class="row">
+                    <div>
+                        <h3>86%</h3>
+                        <h6 class="card-subtitle">Parrainage</h6>
+                    </div>
+                    <div>
+                        <div>
+                            <div class="progress-bar bg-success" role="progressbar" style="width: 85%; height: 6px;" aria-valuenow="25" aria-valuemin="0"
+                                aria-valuemax="100"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Column -->
+        <!-- Column -->
+        <div class="cardSource">
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-12">
+                        <h3>40%</h3>
+                        <h6 class="card-subtitle">Bouche à oreille</h6>
+                    </div>
+                    <div class="col-12">
+                        <div class="progress">
+                            <div class="progress-bar bg-info" role="progressbar" style="width: 40%; height: 6px;" aria-valuenow="25" aria-valuemin="0"
+                                aria-valuemax="100"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Column -->
+        <!-- Column -->
+        <div class="cardSource">
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-12">
+                        <h3>56%</h3>
+                        <h6 class="card-subtitle">Passage</h6>
+                    </div>
+                    <div class="col-12">
+                        <div class="progress">
+                            <div class="progress-bar bg-danger" role="progressbar" style="width: 56%; height: 6px;" aria-valuenow="25" aria-valuemin="0"
+                                aria-valuemax="100"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row" style="margin-top:10px;margin-left:0px;display:flex;justify-content: space-between;width: 100%;">
+    <div class="card" style="width: 500px">
+        <div class="card-content">
+            <div>
+                <h6 class="card-subtitle">Abonnements Vs Visites perdues</h6>
+                <h6 class="card-subtitle">Mois</h6>
+            </div>
+        </div>
+        <div>
+            <p-chart type="bar" [data]="dataMonth" [options]="options" style="height: 360px;width: 50px"></p-chart>
+        </div>
+    </div>
+
+
+    <div class="card" style="width: 500px;margin-left:20px;">
+        <div class="card-content">
+            <div>
+                <h6 class="card-subtitle">Abonnements Vs Visites perdues</h6>
+                <h6 class="card-subtitle">Semaine</h6>
+            </div>
+        </div>
+        <div>
+            <p-chart type="bar" [options]="options" [data]="data" style="height:360px;width:50px"></p-chart>
+        </div>
+    </div>
+
+    <div class="col-md-6 col-lg-3">
+        <div class="card card-body">
+            <!-- Row -->
+            <div class="row">
+                <!-- Column -->
+                <div class="col p-r-0 align-self-center">
+                    <h2 class="font-light m-b-0">324</h2>
+                    <h6 class="text-muted">New Clients</h6>
+                </div>
+                <!-- Column -->
+                <div class="col text-right align-self-center">
+                    <div data-label="20%" class="css-bar m-b-0 css-bar-info css-bar-20"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+</div>

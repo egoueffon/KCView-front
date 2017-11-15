@@ -1,0 +1,36 @@
+
+    .roundbadge{
+    display:inline-block;
+    min-width:10px;
+    padding:3px 7px;
+    font-size:12px;
+    font-weight:700;
+    line-height:1;
+    color:#fff;
+    text-align:center;
+    white-space:nowrap;
+    vertical-align:middle;
+    background-color:#777;
+    border-radius: 15px}
+    
+
+     .abonnement{
+        background-color:#777;
+    }
+
+    .regul{
+        background-color:#EEE;
+    }
+
+    .sd{
+        background-color:#7fff98;
+    }
+
+      .goodies{
+        background-color:#C4C4C4;
+    }
+
+      .remboursement{
+        background-color:#00FF44;
+    }
+

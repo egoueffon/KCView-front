@@ -1,0 +1,24 @@
+<h6 mat-dialog-title>Relance de {{data.suivi.nom_adherent}}</h6>
+<div mat-dialog-content style="height:150px">
+    <mat-form-field  class="example-full-width" style="width:100%">
+        <mat-select placeholder="Type de relance" [(ngModel)]="relance.type">
+            <mat-option *ngFor="let typeRelance of typeRelances" [value]="typeRelance.value">
+                {{ typeRelance.viewValue }}
+            </mat-option>
+        </mat-select>
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width" style="width:100%">
+    <input matInput #message maxlength="256" placeholder="résultat" [(ngModel)]="relance.commentaire">
+    <mat-hint align="start"><strong>décrivez votre résultat de relance</strong> </mat-hint>
+    <mat-hint align="end">{{message.value.length}} / 256</mat-hint>
+  </mat-form-field>
+</div>
+
+
+
+
+<div mat-dialog-actions align="end">
+    <button mat-button [mat-dialog-close]="relance" tabindex="2">Ok</button>
+    <button mat-button (click)="onNoClick()" tabindex="-1">Annuler</button>
+</div>
